@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+
+    "name": "Simple URL redirect example",
+    "description": "Simple URL redirect example.",
+    "version": "0.1",
+
+    "browser_action":
+    {
+        "default_icon": "off.png",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "activeTab",
+        "storage",
+        "*://*/*",
+        "webRequest",
+        "webRequestBlocking"
+    ],
+    "background":
+    {
+        "scripts": ["background.js"]
+    }
+}

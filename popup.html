@@ -1,0 +1,40 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+
+<head>
+    <title>Simple redirects, query replaces and additions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+    -->
+<script src="popup.js"></script>
+
+<body>
+    <!-- Rounded switch -->
+    <label class="switch">
+        <input id="enableOverrideSwitch" type="checkbox">
+        <span class="slider round"></span>
+    </label>
+    <label id='sliderStatus'></label>
+    <p>
+        <h4>Destination URL</h4>
+        <input type="text" id="destinationInput" size="100" value="" />
+    </p>
+    <p>
+        <h4>Original URL</h4>
+        <input type="text" id="originalInput" size="100" value="" />
+    </p>
+    <p></p>
+    <!-- <label id='displayValue'></label> -->
+</body>
+
+</html>
